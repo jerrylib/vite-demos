@@ -5,6 +5,7 @@
   "repository": "git@github.com:jerrylib/vite-demos.git",
   "author": "韩旭gogogo <js_bin@163.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "vite dev --host",
     "build": "vite build",
