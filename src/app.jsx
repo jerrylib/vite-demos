@@ -15,6 +15,9 @@ import { Routes } from '@generouted/react-router'
 
 // const router = createBrowserRouter(routers);
 
+// === Styles === //
+import 'tailwindcss/tailwind.css'
+
 createRoot(document.getElementById('app')).render(<React.StrictMode>
     <Header />
     <Routes />
