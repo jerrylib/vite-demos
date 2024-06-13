@@ -1,24 +1,22 @@
 import React from 'react';
 import { createRoot } from "react-dom/client"
 
-// import {
-//     createBrowserRouter,
-//     RouterProvider,
-// } from "react-router-dom";
-
 // === Components === //
 import Header from '@/components/Header'
 
 // === Routers === //
-// import routers from '@/routers'
 import { Routes } from '@generouted/react-router'
 
-// const router = createBrowserRouter(routers);
 
-// === Styles === //
-import 'tailwindcss/tailwind.css'
+// === Utils === //
+import { ConfigCatProvider, createConsoleLogger, LogLevel } from "configcat-react";
 
-createRoot(document.getElementById('app')).render(<React.StrictMode>
-    <Header />
-    <Routes />
-</React.StrictMode >)
+export default function App() {
+    const logger = createConsoleLogger(LogLevel.Info);
+    return <ConfigCatProvider sdkKey="configcat-sdk-1/14rcCMqp50uPUgy5eCvUyw/-k6vM5sMqkeclHw9_e9lUA" options={{ logger }}>
+        <Header />
+        <Routes />
+    </ConfigCatProvider>
+
+
+}
